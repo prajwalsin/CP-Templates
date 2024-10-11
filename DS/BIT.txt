@@ -1,0 +1,23 @@
+x & (-x) = last set bit in x 
+
+x += x & (-x) 
+This operation sets first 0th bit from having a set bit before it to 1
+Example Let n = 100 and index = 21
+
+21 = 10101 -> 10110 -> 11000 -> 100000 -> 1000000 -> 10000000  (suffix length of continuous 0 keeps on increasing)
+       21       22       24       32         64        128
+
+Thus it takes log2(n) steps max to cross n
+
+Now What indexes do BIT[x] have
+Let x = 20
+10100 
+so all indexes who would have reached 10100 during their update process will be present in BII[x]
+Following steps can be used to find such index 
+Find Least Significant Bit (LSB) in x 
+in all those indices we are looking for LSB must be UNSET
+Bits before LSB can take any value 
+Bit  after  LSB must be exact same 
+so the numbers are of form  100xy  
+BIT[i] = a[i] + a[i-1] + ... + a[i-(1<<LSB)+1]
+
