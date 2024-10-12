@@ -19,3 +19,6 @@ struct node{
 3) insert() to add new number/string to the Structure
 4) search() to search if a number/string is already inserted
 3) a mehtod to solve the problem statement like minxor/autosuggest
+
+Resouces : 
+1) https://www.hackerrank.com/topics/trie
