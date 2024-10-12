@@ -1,0 +1,21 @@
+Main Components of Trie are 
+
+1) Structure of Trie node
+When we insert string consisting if lowecase alphabets it generally looks like This
+... denotes we can add other properties to each node
+struct node{
+    struct node* child[25];
+    bool is end
+    ...
+}
+
+for inserteing number in binary format 
+
+struct node{
+    struct node* next_bit[2];
+}
+
+2) getnode() method is mandatory to assign memory to a node
+3) insert() to add new number/string to the Structure
+4) search() to search if a number/string is already inserted
+3) a mehtod to solve the problem statement like minxor/autosuggest
