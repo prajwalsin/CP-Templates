@@ -21,7 +21,6 @@ ll query(ll index){
 void update(ll val,ll index){
     while (index <= n)
     {
-        cout<<index<<"\n";
        BIT[index]+=val;
        index += index & (-index);   
     }
