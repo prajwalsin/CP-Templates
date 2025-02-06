@@ -7,6 +7,7 @@ using namespace std;
 vector <pair<ll,ll>> v[300005];
 
 void djikstra(ll source,ll nodes){
+    // Single source shortest path in an undirected/directed graph with non negative edge weights
     vector <bool> vis(nodes+1,false);
     vector <bool> par(nodes+1,0);
     vector <ll>   dis(nodes+1,1e15);
